@@ -46,4 +46,13 @@ h1 {
   h1 {
     font-size: 1.5em;
   }
+   /* Move image up */
+  #image {
+    margin-top: -30px;
+  }
+
+  /* Move button up more */
+  #clickme {
+    margin-top: 10px; /* originally 20px, reduce to move upward */
+  }
 }
