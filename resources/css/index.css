@@ -53,7 +53,7 @@ h1 {
 
   /* Move button up */
   #clickme {
-    margin-top: -30px; /* lower number moves button up */
+    margin-top: -21px; /* lower number moves button up */
   }
 }
 .red-button {
