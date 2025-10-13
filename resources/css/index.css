@@ -48,12 +48,12 @@ h1 {
   }
    /* Move image up */
   #image {
-    margin-top: -100px;
+    margin-top: -105px;
   }
 
   /* Move button up */
   #clickme {
-    margin-top: -20px; /* lower number moves button up */
+    margin-top: -15px; /* lower number moves button up */
   }
 }
 .red-button {
