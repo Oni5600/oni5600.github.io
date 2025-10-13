@@ -71,29 +71,31 @@
   }
 </style>
   <script>
-  let isPlaying = false;
+let isPlaying = false;
 
-  function toggleGangnam() {
-    const img = document.getElementById("image");
-    const audio = document.getElementById("myAudio");
-    const button = document.getElementById("clickme");
+function toggleGangnam() {
+  const img = document.getElementById("image");
+  const audio = document.getElementById("myAudio");
+  const button = document.getElementById("clickme");
 
-    if (!isPlaying) {
-      /* Stop */
-      img.src = "./resources/images/pea.gif";
-      audio.currentTime = 0;
-      audio.play();
-      button.textContent = "Click to make him stop dancing!";
-    } else {
-      /* Start */
-      img.src = "./resources/images/pea.png";
-      audio.pause();
-      audio.currentTime = 0;
-      button.textContent = "Click to make the Peashooter do Gangnam Style!";
-    }
-
-    isPlaying = !isPlaying; 
+  if (!isPlaying) {
+    /* Start dancing */
+    img.src = "./resources/images/pea.gif";
+    audio.currentTime = 0;
+    audio.play();
+    button.textContent = "Click to make him stop dancing!";
+    button.classList.add("red-button"); 
+  } else {
+    /* Stop dancing */
+    img.src = "./resources/images/pea.png";
+    audio.pause();
+    audio.currentTime = 0;
+    button.textContent = "Click to make the Peashooter do Gangnam Style!";
+    button.classList.remove("red-button"); /* change to green button */
   }
+
+  isPlaying = !isPlaying;
+}
 </script>
 </head>
 
