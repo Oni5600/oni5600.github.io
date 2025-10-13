@@ -7,10 +7,21 @@ body{
   height: 100vh;
   background-image: url(bg2.jpg);
   background-size: cover;
-}
+h1 {
+  font-size: 4em;
+  font-weight: bold;
+  text-align: center;
+  font-family: Impact, Charcoal, sans-serif;
 
-title {
-  font-size: (999)px;
-  font-weight: bolder;
-
+  color: #FFD700; /* Gold! */
+  text-shadow:
+    -2px -2px 0 #ffffff,  /* Blue outline top-left */
+    2px -2px 0 #000000,   /* Blue outline top-right */
+    -2px 2px 0 #000000,   /* Blue outline bottom-left */
+    2px 2px 0 #000000,    /* Blue outline bottom-right */
+    0 0 10px #00ff3c;     /* Green glow */
+    
+  background: linear-gradient(to right, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

@@ -1,46 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Gangnam Peashooter</title>
-    <style>h1 {
-            font-size: 4em; /* This makes the H1 heading 4x bigger the default font size */
-        }
-        p {
-            font-size: 20px;
-        }</style>
-    <link rel="stylesheet" href="./resources/css/index.css">
-    <!-- Banner section -->
-     <div class="banner">
-        <h1>Gangnam Style Peashooter</h1>
-        <script> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gangnam Peashooter</title>
+  <link rel="stylesheet" href="./resources/css/index.css">
+  <style>
+    h1 {
+      font-size: 4em;
+      text-align: center;
+    }
 
-function changeImage()
+    p {
+      font-size: 20px;
+    }
 
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
 
-{
-var img = document.getElementById("image");
-img.src="./resources/images/pea.gif";
-return false;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    button {
+  margin-top: 20px;
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to bottom, #6fd85f 0%, #4CAF50 50%, #3e8e41 100%);
+  border: 1px solid #2e7031;
+  border-radius: 12px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 
+              0 4px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
-</script>
-  <audio id="myAudio">
-    <source src="./resources/audio/gs.mp3" type="audio/mpeg">
-  </audio>
-   <script>
-    function playMySound() {
-      var audio = document.getElementById("myAudio");
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), transparent);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  pointer-events: none;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #7fec6f 0%, #5fdc58 50%, #45a049 100%);
+}
+  </style>
+  <script>
+  let isPlaying = false;
+
+  function toggleGangnam() {
+    const img = document.getElementById("image");
+    const audio = document.getElementById("myAudio");
+    const button = document.getElementById("clickme");
+
+    if (!isPlaying) {
+      /* Start the dance */
+      img.src = "./resources/images/pea.gif";
+      audio.currentTime = 0;
       audio.play();
+      button.textContent = "Click to make him stop dancing!";
+    } else {
+      /* Stop the dance */
+      img.src = "./resources/images/pea.png";
+      audio.pause();
+      audio.currentTime = 0;
+      button.textContent = "Click to make the Peashooter do Gangnam Style!";
     }
-  </script>
 
-
+    isPlaying = !isPlaying; 
+  }
+</script>
 </head>
+
 <body>
-<img id="image" src="./resources/images/pea.jpg" />
-<audio id="Gangnamsound" src="./resources/audio/gs.mp3"></audio>
-<br><br><br>
-<button id="clickme" onclick="changeImage(); onclick=playMySound();">Click to make the Peashooter do Gangnam Style!</button>
+  <div class="banner center">
+    <h1>Gangnam Style Peashooter</h1>
+
+    <img id="image" src="./resources/images/pea.png" alt="Peashooter Image" />
+
+    <audio id="myAudio">
+      <source src="./resources/audio/gs.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <button id="clickme" onclick="toggleGangnam();">Click to make the Peashooter do Gangnam Style!</button>
+  </div>
 </body>
+</html>
