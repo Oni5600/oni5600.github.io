@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gangnam Peashooter</title>
+    <style>h1 {
+            font-size: 4em; /* This makes the H1 heading 4x bigger the default font size */
+        }
+        p {
+            font-size: 20px;
+        }</style>
+    <link rel="stylesheet" href="./resources/css/index.css">
+    <!-- Banner section -->
+     <div class="banner">
+        <h1>Gangnam Style Peashooter</h1>
+        <script> 
+
+function changeImage()
+
+
+{
+var img = document.getElementById("image");
+img.src="./resources/images/pea.gif";
+return false;
+}
+
+</script>
+  <audio id="myAudio">
+    <source src="./resources/audio/gs.mp3" type="audio/mpeg">
+  </audio>
+   <script>
+    function playMySound() {
+      var audio = document.getElementById("myAudio");
+      audio.play();
+    }
+  </script>
+
+
+</head>
+<body>
+<img id="image" src="./resources/images/pea.jpg" />
+<audio id="Gangnamsound" src="./resources/audio/gs.mp3"></audio>
+<br><br><br>
+<button id="clickme" onclick="changeImage(); onclick=playMySound();">Click to make the Peashooter do Gangnam Style!</button>
+</body>

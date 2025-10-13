@@ -1,0 +1,16 @@
+.banner {
+    margin-top: 75px;
+    text-align: center;
+}
+body{
+     width: 97vw;
+  height: 100vh;
+  background-image: url(bg2.jpg);
+  background-size: cover;
+}
+
+title {
+  font-size: (999)px;
+  font-weight: bolder;
+
+}
