@@ -51,8 +51,8 @@ h1 {
     margin-top: -100px;
   }
 
-  /* Move button up more */
+  /* Move button up */
   #clickme {
-    margin-top: -30px; /* originally 20px, reduce to move upward */
+    margin-top: -30px; /* lower number moves button up */
   }
 }
