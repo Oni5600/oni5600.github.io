@@ -8,20 +8,24 @@ body{
   background-image: url(bg2.jpg);
   background-size: cover;
 h1 {
+  font-family: "Segoe UI", "Trebuchet MS", "Helvetica Neue", sans-serif;
   font-size: 4em;
   font-weight: bold;
   text-align: center;
-  font-family: Impact, Charcoal, sans-serif;
+  color: #ffffff;
 
-  color: #FFD700; /* Gold! */
-  text-shadow:
-    -2px -2px 0 #ffffff,  /* Blue outline top-left */
-    2px -2px 0 #000000,   /* Blue outline top-right */
-    -2px 2px 0 #000000,   /* Blue outline bottom-left */
-    2px 2px 0 #000000,    /* Blue outline bottom-right */
-    0 0 10px #00ff3c;     /* Green glow */
-    
-  background: linear-gradient(to right, #ff0000, #ffff00, #00ff00, #00ffff, #0000ff, #ff00ff);
+  /* Glass effect */
+  background: linear-gradient(to bottom, #e0f7ff 0%, #a0e0ff 35%, #38b0de 70%, #007acc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  /* Glass effect and depth ig */
+  text-shadow:
+    0 1px 1px rgb(255, 255, 255),
+    0 2px 2px rgba(0, 0, 0, 0.2),
+    0 4px 6px rgba(0, 0, 0, 0.25);
+
+  /* tilt text */
+  transform: perspective(300px) rotateX(3deg);
 }
+
