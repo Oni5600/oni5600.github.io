@@ -1,12 +1,26 @@
-.banner {
-    margin-top: 75px;
-    text-align: center;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Stops page from scrolling. */
 }
-body{
-     width: 97vw;
-  height: 100vh;
-  background-image: url(bg2.jpg);
+
+body {
+  background-image: url(./bg2.jpg); 
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  text-align: center;
+  padding: 20px;
+}
+
 h1 {
   font-family: "Segoe UI", "Trebuchet MS", "Helvetica Neue", sans-serif;
   font-size: 4em;
@@ -19,13 +33,10 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  /* Glass effect and depth ig */
   text-shadow:
     0 1px 1px rgb(255, 255, 255),
     0 2px 2px rgba(0, 0, 0, 0.2),
     0 4px 6px rgba(0, 0, 0, 0.25);
 
-  /* tilt text */
   transform: perspective(300px) rotateX(3deg);
 }
-

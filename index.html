@@ -72,13 +72,13 @@ button:hover {
     const button = document.getElementById("clickme");
 
     if (!isPlaying) {
-      /* Start the dance */
+      /* Stop */
       img.src = "./resources/images/pea.gif";
       audio.currentTime = 0;
       audio.play();
       button.textContent = "Click to make him stop dancing!";
     } else {
-      /* Stop the dance */
+      /* Start */
       img.src = "./resources/images/pea.png";
       audio.pause();
       audio.currentTime = 0;
