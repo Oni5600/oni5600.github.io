@@ -83,14 +83,14 @@ function toggleGangnam() {
     img.src = "./resources/images/pea.gif";
     audio.currentTime = 0;
     audio.play();
-    button.textContent = "Click to make him stop doing Gangnam Style!";
+    button.textContent = "Stop Dancing!";
     button.classList.add("red-button"); 
   } else {
     /* Stop dancing */
     img.src = "./resources/images/pea.png";
     audio.pause();
     audio.currentTime = 0;
-    button.textContent = "Click to make the Peashooter do Gangnam Style!";
+    button.textContent = "Start Dancing!";
     button.classList.remove("red-button"); /* change to green button */
   }
 
@@ -110,7 +110,7 @@ function toggleGangnam() {
       Your browser does not support the audio element.
     </audio>
 
-    <button id="clickme" onclick="toggleGangnam();">Click to make the Peashooter do Gangnam Style!</button>
+    <button id="clickme" onclick="toggleGangnam();"> Start Dancing!</button>
   </div>
 </body>
 </html>
