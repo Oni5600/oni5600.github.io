@@ -6,13 +6,25 @@
   <title>Gangnam Peashooter</title>
   <link rel="stylesheet" href="./resources/css/index.css">
   <style>
+  :root {
+    font-size: 16px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+  }
+
   h1 {
-    font-size: 4em;
+    font-size: 4rem;
     text-align: center;
+    margin: 2% 0;
   }
 
   p {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .center {
@@ -21,25 +33,29 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    width: 100%;
+    padding: 2%;
   }
 
   img {
-    max-width: 100%;
+    width: 50%;
+    max-width: 400px;
     height: auto;
+    margin: 2% 0;
   }
 
   button {
-    margin-top: 20px;
-    padding: 20px 40px;
-    font-size: 24px;
+    margin-top: 2%;
+    padding: 1.25rem 2.5rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: white;
     background: linear-gradient(to bottom, #6fd85f 0%, #4CAF50 50%, #3e8e41 100%);
     border: 1px solid #2e7031;
-    border-radius: 12px;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 
-                0 4px 8px rgba(0, 0, 0, 0.3);
-    text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
+    border-radius: 0.75rem;
+    box-shadow: inset 0 0.0625rem 0 rgba(255,255,255,0.6), 
+                0 0.25rem 0.5rem rgba(0, 0, 0, 0.3);
+    text-shadow: 0 -0.0625rem 0.0625rem rgba(0,0,0,0.3);
     cursor: pointer;
     transition: background 0.3s ease;
     position: relative;
@@ -54,8 +70,8 @@
     width: 100%;
     height: 50%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), transparent);
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
     pointer-events: none;
   }
 
@@ -63,14 +79,32 @@
     background: linear-gradient(to bottom, #7fec6f 0%, #5fdc58 50%, #45a049 100%);
   }
 
-  /* 🔽 Mobile font fix */
+  .red-button {
+    background: linear-gradient(to bottom, #ff4c4c 0%, #d93636 50%, #b22222 100%);
+    border: 1px solid #8b1a1a;
+  }
+
+  .red-button:hover {
+    background: linear-gradient(to bottom, #ff6b6b 0%, #e74c3c 50%, #c0392b 100%);
+  }
+
   @media (max-width: 600px) {
     h1 {
-      font-size: 1.5em;
+      font-size: 2rem;
+    }
+
+    button {
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+    }
+
+    img {
+      width: 80%;
     }
   }
 </style>
-  <script>
+
+<script>
 let isPlaying = false;
 
 function toggleGangnam() {
@@ -91,7 +125,7 @@ function toggleGangnam() {
     audio.pause();
     audio.currentTime = 0;
     button.textContent = "Start Dancing!";
-    button.classList.remove("red-button"); /* change to green button */
+    button.classList.remove("red-button");
   }
 
   isPlaying = !isPlaying;
@@ -110,7 +144,7 @@ function toggleGangnam() {
       Your browser does not support the audio element.
     </audio>
 
-    <button id="clickme" onclick="toggleGangnam();"> Start Dancing!</button>
+    <button id="clickme" onclick="toggleGangnam();">Start Dancing!</button>
   </div>
 </body>
 </html>
