@@ -35,8 +35,8 @@ h1 {
 
   text-shadow:
     0 1px 1px rgb(255, 255, 255),
-    0 2px 2px rgba(0, 0, 0, 0.2),
-    0 4px 6px rgba(0, 0, 0, 0.25);
+    0 2px 2px rgba(0, 0, 0, 0.7),
+    0 4px 6px rgba(0, 0, 0, 0.704);
 
   transform: perspective(300px) rotateX(3deg);
 }
@@ -45,6 +45,7 @@ h1 {
 @media (max-width: 600px) {
   h1 {
     font-size: 1.5em;
+    margin-top: 40px; /* move title down on mobile */
   }
    /* Move image up */
   #image {
