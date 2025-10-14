@@ -45,11 +45,11 @@ h1 {
 @media (max-width: 600px) {
   h1 {
     font-size: 1.5em;
-    margin-top: 40px; /* move title down on mobile */
+    margin-top: 15px; /* move title down on mobile */
   }
    /* Move image up */
   #image {
-    margin-top: -105px;
+    margin-top: -110px;
   }
 
   /* Move button up */
