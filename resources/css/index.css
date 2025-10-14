@@ -35,8 +35,8 @@ h1 {
 
   text-shadow:
     0 1px 1px rgb(255, 255, 255),
-    0 2px 2px rgba(0, 0, 0, 0.7),
-    0 4px 6px rgba(0, 0, 0, 0.704);
+    0 2px 2px rgba(0, 0, 0, 0.807),
+    0 4px 6px rgba(0, 0, 0, 0.8);
 
   transform: perspective(300px) rotateX(3deg);
 }
@@ -54,7 +54,7 @@ h1 {
 
   /* Move button up */
   #clickme {
-    margin-top: -15px; /* lower number moves button up */
+    margin-top: -5px; /* lower number moves button up */
   }
 }
 .red-button {
