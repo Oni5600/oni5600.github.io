@@ -41,20 +41,20 @@ h1 {
   transform: perspective(300px) rotateX(3deg);
 }
 
-/* Mobile font size fix */
+/* Mobile size fix */
 @media (max-width: 600px) {
   h1 {
     font-size: 1.5em;
-    margin-top: 15px; /* move title down on mobile */
+    margin-top: 15px;
   }
-   /* Move image up */
+/* Move image up */
   #image {
-    margin-top: -110px;
+    display: block;
+    margin: -110px auto 0 auto;
   }
 
-  /* Move button up */
   #clickme {
-    margin-top: -5px; /* lower number moves button up */
+    margin-top: 5px; /* lower number moves button up */
   }
 }
 .red-button {
