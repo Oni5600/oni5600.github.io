@@ -53,7 +53,7 @@ h1 {
   #image {
     display: block;
     margin: -110px auto 0 auto;
-    transform: translateX(18px);
+    transform: translateX(17px);
   }
 
   #clickme {
