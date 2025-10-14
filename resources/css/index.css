@@ -40,7 +40,9 @@ h1 {
 
   transform: perspective(300px) rotateX(3deg);
 }
-
+#image {
+  transform: translateX(22px); /* move image right */
+}
 /* Mobile size fix */
 @media (max-width: 600px) {
   h1 {
@@ -51,7 +53,7 @@ h1 {
   #image {
     display: block;
     margin: -110px auto 0 auto;
-    transform: translateX(17px); /* move image right */
+    transform: translateX(18px);
   }
 
   #clickme {
