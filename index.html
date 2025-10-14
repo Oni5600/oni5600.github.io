@@ -106,42 +106,26 @@
 
 <script>
 let isPlaying = false;
-let audioInitialized = false;
 
 function toggleGangnam() {
-  var img = document.getElementById("image");
-  var audio = document.getElementById("myAudio");
-  var button = document.getElementById("clickme");
-
-  // ✅ iOS 6 fix: initialize audio on first user interaction
-  if (!audioInitialized) {
-    // Create a dummy play to "unlock" the audio
-    audio.play();
-    audio.pause();
-    audioInitialized = true;
-  }
+  const img = document.getElementById("image");
+  const audio = document.getElementById("myAudio");
+  const button = document.getElementById("clickme");
 
   if (!isPlaying) {
-    // Start dancing
+    /* Start dancing */
     img.src = "./resources/images/pea.gif";
-    
-    try {
-      audio.currentTime = 0;
-      audio.play(); // Must be inside user-triggered event for iOS 6
-    } catch (e) {
-      console.log("Audio play error:", e);
-    }
-
+    audio.currentTime = 0;
+    audio.play();
     button.textContent = "Stop Dancing!";
-    button.className += " red-button";
+    button.classList.add("red-button"); 
   } else {
-    // Stop dancing
+    /* Stop dancing */
     img.src = "./resources/images/pea.png";
     audio.pause();
     audio.currentTime = 0;
-
     button.textContent = "Start Dancing!";
-    button.className = button.className.replace(" red-button", "");
+    button.classList.remove("red-button");
   }
 
   isPlaying = !isPlaying;
